@@ -1,0 +1,4 @@
+commandButton
+defineTag
+insertTag
+inputText
