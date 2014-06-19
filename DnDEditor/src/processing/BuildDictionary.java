@@ -31,8 +31,9 @@ public class BuildDictionary {
 			while(line!=null){
 				 try {
 					line= br.readLine();
-					dictionary.add(line);
-					System.out.println("word added is "+line);
+					if(line!=null)
+						dictionary.add(line);
+					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					System.out.println("error reading the file");
@@ -61,6 +62,18 @@ public class BuildDictionary {
 		
 		
 		return dictionary;
+		
+	}
+	
+	public static void main(String args[]){
+		
+		 File f= new File("src//Content//Language//xhtml//XHTML_components.txt");
+
+	      BuildDictionary bd = new BuildDictionary();
+	      Vector<String> listWords=bd.parseFile(f);
+	      System.out.println("list of words retrieved here is "+listWords);
+		 
+		
 		
 	}
 	
